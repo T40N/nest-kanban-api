@@ -11,7 +11,7 @@ export const dbConfig = registerAs('db', () => {
 
   return {
     host: POSTGRES_HOST,
-    port: POSTGRES_PORT,
+    port: POSTGRES_PORT ? Number(POSTGRES_PORT) : 5432,
     db: POSTGRES_DB,
     user: POSTGRES_USER,
     password: POSTGRES_PASSWORD,
